@@ -1,0 +1,488 @@
+{% extends 'index.html' %}
+{%  block head %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    {#<!-- Font awesome --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+    {#<!-- Bootstrap --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">  
+    {#<!-- Slick slider --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}">           
+    {#<!-- Fancybox slider --> #}
+    <link rel="stylesheet" type="text/css"  media="screen" href="{{ url_for('static', filename='css/jquery.fancybox.css') }}"> 
+    {#<!-- Theme color -->#}
+    <link id="switcher" rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default-theme.css') }}">
+    {#<!-- Main style sheet --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">   
+    {#<!-- Google Fonts --> #}
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    <title>Lux Academy Inc||Course</title>
+{% endblock %}
+{# this is the end of the head/title section#}
+
+{# I will need  another block for the body section #}
+
+{% block body %}
+
+<!--START SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>      
+    </a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  <!-- Start header  -->
+  <header id="mu-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-header-area">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-left">
+                  <div class="mu-top-email">
+                    <i class="fa fa-envelope"></i>
+                    <span>luxacadermy@gmail.com</span>
+                  </div>
+                  <div class="mu-top-phone">
+                    <i class="fa fa-phone"></i>
+                    <span>(+254) 0798166628</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-right">
+                  <nav>
+                    <ul class="mu-top-social-nav">
+                      <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                      <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                      <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                      <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                      <li><a href="#"><span class="fa fa-github"></span></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header  -->
+  <!-- Start menu -->
+  <section id="mu-menu">
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Lux Academy</span></a>
+          <!-- IMG BASED LOGO  -->
+          <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a href="{{ url_for('index')}}">Home</a></li>            
+            <li><a href="{{ url_for('Courses')}}" >Course </a></li> 
+            <li><a href="{{ url_for('Blogs')}}">Blog</a> </li>
+            <li><a href="{{ url_for('About')}}">About</a></li>
+            <li ><a href="#">Tech Talk</a></li>               
+            <li><a href="#">SIGN UP</a></li>   
+            <li ><a href="#">LOG IN</a></li>                            
+              </ul>
+        </div>
+        <!--/.nav-collapse -->        
+      </div>     
+    </nav>
+  </section>
+  <!-- End menu -->
+  <!-- Start search box -->
+  <div id="mu-search">
+    <div class="mu-search-area">      
+      <button class="mu-search-close"><span class="fa fa-close"></span></button>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">            
+            <form class="mu-search-form">
+              <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End search box -->
+ <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+           <h2>Courses</h2>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+ <section id="mu-course-content">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-course-content-area">
+            <div class="row">
+              <div class="col-md-9">
+                <!-- start course content container -->
+                <div class="mu-course-container">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                    <div class="mu-latest-course-single">
+                      <figure class="mu-latest-course-img">
+                        <a href="#"><img src="{{ url_for('static', filename='img/courses/1.jpg')}}" alt="img" width="200px" height="275px"></a>
+                        <figcaption class="mu-latest-course-imgcaption">
+                          <a href="#"> Python</a>
+                          <span><i class="fa fa-clock-o"></i>75 Days</span>
+                        </figcaption>
+                      </figure>
+                      <div class="mu-latest-course-single-content">
+                        <h4><a href="courses/Python.html">Python Programming Language.</a></h4>
+                        <p style=" text-align: justify;">
+                         Python is a free and open source high level programming language which is interplated, which supports object oreinted, procedural oriented, functional and imperative oriented programming paradigm.
+                        </p>
+                        <div class="mu-latest-course-single-contbottom">
+                          <a class="mu-course-details" href="#">Enroll Now</a>
+                          <span class="mu-course-price" href="#">$0.00</span>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>                  
+                  <div class="col-md-6 col-sm-6">
+                    <div class="mu-latest-course-single">
+                      <figure class="mu-latest-course-img">
+                        <a href="#"><img src="{{ url_for('static', filename='img/courses/2.png')}}" alt="img" width="200px" height="275px"></a>
+                        <figcaption class="mu-latest-course-imgcaption">
+                          <a href="#">JavaScript </a>
+                          <span><i class="fa fa-clock-o"></i>75 Days</span>
+                        </figcaption>
+                      </figure>
+                      <div class="mu-latest-course-single-content">
+                        <h4><a href="#">JavaScript programming Language</a></h4>
+                        <p style=" text-align: justify;">
+                          It is a client-side scripting language, which means the source code is processed by the client's browser rather than on the server. It's functions can run after a webpage has loaded without communicating with the server.
+
+
+                        </p>
+                        <div class="mu-latest-course-single-contbottom">
+                          <a class="mu-course-details" href="#">Enroll Now</a>
+                          <span class="mu-course-price" href="#">$0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="mu-latest-course-single">
+                      <figure class="mu-latest-course-img">
+                        <a href="#"><img src="{{ url_for('static', filename='img/courses/big-data-3338320_960_720.png')}}" alt="img" width="200px" height="275px"></a>
+                        <figcaption class="mu-latest-course-imgcaption">
+                          <a href="#">Data Science</a>
+                          <span><i class="fa fa-clock-o"></i>75 Days</span>
+                        </figcaption>
+                      </figure>
+                      <div class="mu-latest-course-single-content">
+                        <h4><a href="#"> Data Science full course</a></h4>
+                        <p style=" text-align: justify;">
+                          Data science is the process of using data to find solution and predict outcomes for a problem statement. In this tutorial we are going to cover all data scince process: Business requirement, Data collection, Data cleaning, Data exploration and analysis, Data modeling, Data validation to Data deployment and optimization.
+
+                          
+                        </p>
+                        <div class="mu-latest-course-single-contbottom">
+                          <a class="mu-course-details" href="#">Enroll Now</a>
+                          <span class="mu-course-price" href="#">$0.00</span>
+                        </div>
+                      </div>
+                    </div> 
+                  </div> 
+                <div class="col-md-6 col-sm-6">
+                    <div class="mu-latest-course-single">
+                      <figure class="mu-latest-course-img">
+                        <a href="#"><img src="{{ url_for('static', filename='img/courses/machine-learning-4129175_960_720.jpg')}}" alt="img" width="200px" height="275px"></a>
+                        <figcaption class="mu-latest-course-imgcaption">
+                          <a href="#">Machine Learning </a>
+                          <span><i class="fa fa-clock-o"></i>75 Days</span>
+                        </figcaption>
+                      </figure>
+                      <div class="mu-latest-course-single-content">
+                        <h4><a href="#">Introduction to Machine Learning </a></h4>
+                        <p style=" text-align: justify;">
+                          
+                         Machine Learning is a type of artificial intelligence that provides computer with the ability to learn  without being explicitly programmed, it focuses on development oof computer programs that can change when exposed to new data, in this tutorial we are going to use python in learning and developing mavhine learning algorithms.
+
+
+                        </p>
+                        <div class="mu-latest-course-single-contbottom">
+                          <a class="mu-course-details" href="#">Enroll Now</a>
+                          <span class="mu-course-price" href="#">$0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+
+                  <div class="col-md-6 col-sm-6">
+                    <div class="mu-latest-course-single">
+                      <figure class="mu-latest-course-img">
+                        <a href="#"><img src="{{ url_for('static', filename='img/courses/flask.jpeg')}}" alt="img" width="200px" height="275px"></a>
+                        <figcaption class="mu-latest-course-imgcaption">
+                          <a href="#">Django FrameWork. </a>
+                          <span><i class="fa fa-clock-o"></i>75 Days</span>
+                        </figcaption>
+                      </figure>
+                      <div class="mu-latest-course-single-content">
+                        <h4><a href="#">Introduction to Django. </a></h4>
+                        <p style=" text-align: justify;">
+                         A web Application Framework is a collection of libraries and modules that enables Developers to write applications without having to bother about low level details such as protocols and thread management. Django is a high-level python web framework that encourages rapid, clean and pragmatic design.
+
+
+                        </p>
+                        <div class="mu-latest-course-single-contbottom">
+                          <a class="mu-course-details" href="#">Enroll Now</a>
+                          <span class="mu-course-price" href="#">$0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                 <div class="col-md-6 col-sm-6">
+                    <div class="mu-latest-course-single">
+                      <figure class="mu-latest-course-img">
+                        <a href="#"><img src="{{ url_for('static', filename='img/courses/flask1.png')}}" alt="img" width="200px" height="275px"></a>
+                        <figcaption class="mu-latest-course-imgcaption">
+                          <a href="#"> Flask FrameWork.</a>
+                          <span><i class="fa fa-clock-o"></i>75 Days</span>
+                        </figcaption>
+                      </figure>
+                      <div class="mu-latest-course-single-content">
+                        <h4><a href="#">Introduction to Flask.</a></h4>
+                        <p style=" text-align: justify;">
+                          
+                          Flask is web application micro-framework written in python which is based on Werkzeug WSGI toolkit and jinj2 tempalate engine. It helps you organize your code in the url request  and the protocols you are using. 
+                          it was developed by Armin Ronacher who leads a group of python ethusiasts named Pocco.
+                        </p>
+                        <div class="mu-latest-course-single-contbottom">
+                          <a class="mu-course-details" href="#">Enroll Now</a>
+                          <span class="mu-course-price" href="#">$0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <!-- end course content container -->
+                <!-- start course pagination -->
+                <div class="mu-pagination">
+                  <nav>
+                    <ul class="pagination">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span class="fa fa-angle-left"></span> Prev </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                         Next <span class="fa fa-angle-right"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- end course pagination -->
+              </div>
+              <div class="col-md-3">
+                <!-- start sidebar -->
+                <aside class="mu-sidebar">
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Blog Tags</h3>
+                    <ul class="mu-sidebar-catg">
+                      <li><a href="#">Flask</a></li>
+                      <li><a href="#">Django</a></li>
+                      <li><a href="#">React.js</a></li>
+                      <li><a href="#">React-360</a></li>
+                      <li><a href="#">Deep Learning</a></li>
+                      <li><a href="#">Machine learning</a></li>
+                    </ul>
+                  </div>
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Popular Course</h3>
+                    <div class="mu-sidebar-popular-courses">
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/courses/sci.png')}}" alt="img">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Data Science</a></h4>                      
+                          <span class="popular-course-price">$0.00</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/courses/web1.png')}}" alt="img">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Web Development</a></h4>                      
+                          <span class="popular-course-price">$0.00</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/courses/frm.png')}}" alt="img">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Web Frameworks</a></h4>                      
+                          <span class="popular-course-price">$0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Archives</h3>
+                    <ul class="mu-sidebar-catg mu-sidebar-archives">
+                      <li><a href="#">Git </a></li>
+                      <li><a href=""> ES6</a></li>
+                      <li><a href="">MERN </a></li>
+                      <li><a href="">Bash Scripting </a></li>
+                    </ul>
+                  </div>
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Tags Cloud</h3>
+                    <div class="tag-cloud">
+                      <a href="#">Health</a>
+                      <a href="#">Science</a>
+                      <a href="#">Sports</a>
+                      <a href="#">Mathematics</a>
+                      <a href="#">Web Design</a>
+                      <a href="#">Admission</a>
+                      <a href="#">History</a>
+                      <a href="#">Environment</a>
+                    </div>
+                  </div>
+                  <!-- end single sidebar -->
+                </aside>
+                <!-- / end sidebar -->
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+  <!-- Start footer -->
+  <footer id="mu-footer">
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="{{ url_for('index')}}">Home</a></li>
+                  <li><a href="{{ url_for('Blogs')}}">Blog</a></li>
+                  <li><a href="{{ url_for('index')}}">Log In</a></li>
+                  <li><a href="{{ url_for('index')}}">Sign Up</a></li>
+                  <li><a href="{{ url_for('index')}}">Tech Talk</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4> Major Courses.</h4>
+                <ul>
+                  <li><a href="{{ url_for('Courses')}}">Python</a></li>
+                  <li><a href="{{ url_for('Courses')}}">JavaScript</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Full Stack</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Data Science</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Machine Learning</a></li>                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>News letter</h4>
+                <p>Get latest update, news & academic offers</p>
+                <form class="mu-subscribe-form">
+                  <input type="email" placeholder="Type your Email">
+                  <button class="mu-subscribe-btn" type="submit">Subscribe!</button>
+                </form>               
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Contact</h4>
+                <address>
+                   <p>P.O. Box 322, Thika, KENYA.</p>
+                  <p>Phone: (+254) 0798 166 628 </p>
+                  <p>Website: www.lux.com</p>
+                  <p>Email: luxacadermy.com</p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer top -->
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>&copy; All Right Reserved. Designed by <a href="#" rel="#">  Lux.com</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+  <!-- End footer -->
+
+    {# <!-- jQuery library -->#}
+  <script src="{{ url_for('static', filename='javascript/jquery.min.js')}}"></script>  
+  {# <!-- Include all compiled plugins (below), or include individual files as needed --> #}
+  <script src="{{ url_for('static', filename='javascript/bootstrap.js')}}"></script>   
+  {# <!-- Slick slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/slick.js')}}"></script>
+  {# <!-- Counter -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/waypoints.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.counterup.js')}}"></script>  
+  {# <!-- Mixit slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.mixitup.js')}}"></script>
+  {# <!-- Add fancyBox --> #}       
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.fancybox.pack.js')}}"></script>
+   {# <!-- Custom js -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/custom.js')}}"></script>
+{% endblock %}
+{# this is the end of the body section #}
+{# i will need another block for the footer section here #}
+{% block footer %}
+{% endblock%}

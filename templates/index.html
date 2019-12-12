@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   {# <!--=====Lux Coding Academy Homepage======--> #}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    {% block head%}   
+     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    {#<!-- Font awesome --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+    {#<!-- Bootstrap --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">  
+    {#<!-- Slick slider --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}">           
+    {#<!-- Fancybox slider --> #}
+    <link rel="stylesheet" type="text/css"  media="screen" href="{{ url_for('static', filename='css/jquery.fancybox.css') }}"> 
+    {#<!-- Theme color -->#}
+    <link id="switcher" rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default-theme.css') }}">
+    {#<!-- Main style sheet --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">   
+    {#<!-- Google Fonts --> #}
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    <title>Lux Academy Inc||Home</title>
+     {% endblock %}
+  </head>
+{#<!--=====START  of The Body Section======--> #}
+{% block body %}
+  <body> 
+{#<!--=====START SCROLL TOP BUTTON======-->  #}
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>      
+    </a>
+  {#<!-- END SCROLL TOP BUTTON --> #}
+  {#<!-- Start header  --> #}
+  <header id="mu-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-header-area">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-left">
+                  <div class="mu-top-email">
+                    <i class="fa fa-envelope"></i>
+                    <span>luxacademy@gmail.com</span>
+                  </div>
+                  <div class="mu-top-phone">
+                    <i class="fa fa-phone"></i>
+                    <span>+254798166628</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-right">
+                  <nav>
+                    <ul class="mu-top-social-nav">
+                      <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                      <li><a href="#"><span class="fa fa-twitter"></span></a></li> 
+                      <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                      <li><a href="#"><span class="fa fa-github"></span></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  {#<!-- End header  --> #}
+  {#<!-- Start menu --> #}
+  <section id="mu-menu">
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          {# <!-- FOR MOBILE VIEW COLLAPSED BUTTON --> #}
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          {# <!-- LOGO -->  #}             
+          {# <!-- TEXT BASED LOGO --> #}
+          <a class="navbar-brand" href="index.html">
+          <i class="fa fa-university"> </i><span>Lux Academy</span></a>
+          {#<!-- IMG BASED LOGO  --> #}
+          {# <!-- IN future to change LOgo TO AN IMAGE ADD IT HERE --> #}
+          {#<!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> --> #}
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a href="{{ url_for('index')}}">Home</a></li>            
+            <li><a href="{{ url_for('Courses')}}" >Course </a></li> 
+            <li><a href="{{ url_for('Blogs')}}">Blog</a> </li>
+            <li><a href="{{ url_for('About')}}">About</a></li>
+            <li ><a href="#">Tech Talk</a></li>               
+            <li><a href="#">SIGN UP</a></li>   
+            <li ><a href="#">LOG IN</a></li>                           
+          </ul>                     
+        </div>
+</div>
+         {#<!--/.nav-collapse --> #}        
+      </div>     
+    </nav>
+  </section>
+  {#<!-- End menu -->
+  <!-- End menu -->
+  <!-- End menu -->
+  <!-- in futere to add a search box add it here -->
+  <!-- Start search box -->  
+  <!-- 
+  <div id="mu-search">
+    <div class="mu-search-area">      
+      <button class="mu-search-close"><span class="fa fa-close"></span></button>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">            
+            <form class="mu-search-form">
+              <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ -->  #}
+  {# <!-- End search box --> #}
+  {#} <!-- Start Slider --> #}
+  <section id="mu-slider">
+     {# <!-- Start single slider item --> #}
+    <div class="mu-slider-single">
+      <div class="mu-slider-img">
+        <figure>
+          <img src="{{ url_for('static', filename='img/slider/1.jpg')}}" alt="img">
+        </figure>
+      </div>
+      <div class="mu-slider-content">
+        <h4>Welcome To Lux  Academy</h4>
+        <span></span>
+        <p>Making World A Better And A Digital Globe
+        </p>
+        <p> It’s not going to be easy, but it’s going to be worth it.</p>
+        <p>
+         Learn using Project-based approach
+        </p>
+        <a href="#" class="mu-read-more-btn">Read More</a>
+      </div>
+    </div>
+    {#<!-- Start single slider item --> #}
+    {#<!-- Start single slider item --> #}
+    <div class="mu-slider-single">
+      <div class="mu-slider-img">
+        <figure>
+         <img src="{{ url_for('static', filename='img/slider/2.jpg')}}" alt="img">
+        </figure>
+      </div>
+      <div class="mu-slider-content">
+        <h4>Welcome To Lux  Academy</h4>
+        <span></span>
+        <h2>OUR VISION</h2>
+        <p>To be a leader in software development  and  innovation</p> 
+        <p>for social economic prosperity  and global competitiveness.</p>
+
+      </div>
+    </div>
+    {# <!-- Start single slider item --> #}
+    {#<!-- Start single slider item --> #}
+    <div class="mu-slider-single">
+      <div class="mu-slider-img">
+        <figure>
+          <img src="{{ url_for('static', filename='img/slider/3.jpg')}}" alt="img">
+        </figure>
+      </div>
+      <div class="mu-slider-content">
+        <h4> Welcome To Lux  Academy</h4>
+        <span></span>
+        <h2> OUR MISSION</h2>
+        <p>To provide, design and develop quality softwares </p>
+        <p>fostering applied research and community outreach </p>
+        <p>for innovative and sustainable economical development.</p>
+      </div>
+    </div>
+  </section>
+  {# <!-- End Slider --> #}
+  {# <!-- Start service  --> #}
+  <section id="mu-service">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-service-area">
+            {# <!-- Start single service --> #}
+            <div class="mu-service-single">
+              <span class="fa fa-book"></span>
+              <h3>Learn Now</h3>
+              <p style="text-align: justify;">You can enroll any programming and technology course for free, We offer  beginner  to advanced courses.</p>
+            </div>
+            {# <!-- Start single service -->  #}
+            {# <!-- Start single service -->  #}
+            <div class="mu-service-single">
+              <span class="fa fa-users"></span>
+              <h3>Contact Us</h3>
+              <p style="text-align: justify;"> For any query and clarification you can contact us 24/7. Our help desk is always active and willing to assist.</p>
+            </div>
+            <!-- Start single service -->
+            {#<!-- Start single service --> #}
+            <div class="mu-service-single">
+              <span class="fa fa-table"></span>
+              <h3>Hire  Us</h3>
+              <p style="text-align: justify;"> We offer affordable and best services from software  development to system repair and system maitenance. </p>
+            </div>
+            {# <!-- Start single service --> #}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {# <!-- End service  --> #}
+
+  {# <!-- Start about us --> #}
+  <section id="mu-about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-about-us-area">           
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-left">
+                  {# <!-- Start Title --> #}
+                  <div class="mu-title">
+                    <h2>About Us</h2>              
+                  </div>
+                  {# <!-- End Title --> #}
+                  <p style="text-align: justify;">
+                  Lux coding acadermy is a free online training BootCamp which have crash and advance coding classes. Our courses  are designed and organized by  experienced team of programmers. You can also hire our team of software developers or download our free, available and ready to use softwares and code sippets and edit to fit your need and use for production. <br> 
+                  <b>Join Lux coding acadermy,</b> Join a World class Software Engineering Team.
+
+                  </p>
+                  <p style="text-align: justify;"> In pursuing of our vision and mission, we are 
+                      guided by the following <b>core values</b>:</p>
+                  <ul>
+                    <li>Transperancy and integrity..</li>
+                    <li>Honesty and accountability. </li>
+                    <li>Exellence diversity and team work</li>
+                    <li>Effectiveness and respect for human right. </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-right">
+                   {# <!-- About Us Image --> #}
+                  <img src="{{ url_for('static', filename='img/about-us.jpg')}}" alt="img" height="100%" width="100%">
+                </a>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {# <!-- End about us --> #}
+  {# <!-- Start latest course section --> #}
+  <section id="mu-latest-courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-latest-courses-area">
+            {# <!-- Start Title --> #}
+            <div class="mu-title">
+              <h2>Our Latest Courses</h2>
+            </div>
+            {# <!-- End Title --> #}
+            {# <!-- Start latest course content --> #}
+          <div id="mu-latest-course-slide" class="mu-latest-courses-content">
+          	{#<!-- =====WEB DEVELOPMENT COURSE BARNER======== -->  #}
+          	{# <!-- =====WEB DEVELOPMENT COURSE BARNER======== --> #}
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <figcaption class="mu-latest-course-imgcaption">
+                      <a href="#">Web Development</a>
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <h4><a href="#">Web Development Tutorial.</a></h4>
+
+                   <p style="text-align: justify;">
+
+                    Web Development, refers to activaties related to website functionalities development,creation of web site for the Internet or an intranet. There are two broad divisions of web development – front-end development (also called client-side development) and back-end development server-side.
+                    <br> <center>Enroll and Learn More</center></p>
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="#">Enroll</a>
+                      <span class="mu-course-price" href="#">$0.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {# <!-- =====PYTHON COURSE BARNER======== --> #}
+              {# <!-- =====PYTHON COURSE BARNER======== --> #}
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <figcaption class="mu-latest-course-imgcaption">
+                      <a href="#">Python programming language</a>
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <h4><a href="#">Python Tutorial</a></h4>
+                    <p style="text-align: justify;">
+                    Python is a free and open source high level programming language which is interplated, which supports object oreinted, procedural oriented, functional and imperative oriented programming paradigm.python was originally conceptualized by Guido van Rossum in the late 1980s.<br> <center>Enroll and Learn More</center>
+                   </p>
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="#">Enroll</a>
+                      <span class="mu-course-price" href="#">$0.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             {# <!-- =====DATA BASE COURSE BARNER======== --> #}
+             {# <!-- =====DATA BASE COURSE BARNER======== --> #}
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <figcaption class="mu-latest-course-imgcaption">
+                      <a href="#">Data Base</a>
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <h4><a href="#">DataBase Tutorial.</a></h4>
+                    <p style="text-align: justify;">A database is a collection of information that is organized so that it can be easily accessed, managed and updated, There are SQL(relational) and NOSQL (not only sql or non relational) database Systems. Database plays important role in software development. It stares all information of a dynamic website. <br> <center>Enroll and Learn More.</center> 
+                   </p>
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="#">Enroll</a>
+                      <span class="mu-course-price" href="#">$0.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {# <!-- =====DJANGO COURSE BARNER======== --> #}
+              {# <!-- =====DJANGO COURSE BARNER======== --> #}
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+
+                    <figcaption class="mu-latest-course-imgcaption">
+                      <a href="#">Django</a>
+                       </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <h4><a href="#">Django Framework Tutorial</a></h4>
+                    <p style="text-align: justify;">Django is an open-source web framework, written in Python, that follows the model-view-template architectural pattern. It uses the idea of Project, where project is the complete Webpage in development made up of Applications.  Django project is a collection of many apps. Enroll and learn using Project-based approach. <br> <center>Enroll and Learn More.</center> </p>
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="#">Enroll</a>
+                      <span class="mu-course-price" href="#">$0.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               {#<!-- =====DATA SCIENCE COURSE BARNER======== --> #}
+               {#<!-- =====DATA SCIENCE COURSE BARNER======== --> #}
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <figcaption class="mu-latest-course-imgcaption">
+                      <a href="#">Data Science</a>
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <h4><a href="#">Data Science tutorial</a></h4>
+                    <p style="text-align: justify;">Data Science or data driven science is a must have IT professional. It Involves extracting knowledge and  information from data. You translate business problem into a research project and then traslate the result back into practical  solution which requires a deep understanding of business domain and creativity. <br><center>Enroll and Learn More.</center></p>
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="#">Enroll</a>
+                      <span class="mu-course-price" href="#">$0.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               {# <!-- =====MACHINE LEARNING COURSE BARNER======== -->  #} 
+               {# <!-- =====MACHINE LEARNING COURSE BARNER======== -->  #}
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <figcaption class="mu-latest-course-imgcaption">
+                      <a href="#">Machine Learning</a>
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <h4><a href="#">Machine Learing Tutorial</a></h4>
+                    <p style="text-align: justify;" >It is a branch of artificial intelligence concerned with the design and development of algorithms that allows computers to evolve behaviors based on emperical data.
+                    Also reffered to as a type of artificial intelligence that provides computers with the ability to learn without being Explicitly programmed. <br> <center>Enroll and Learn More.</center> 
+                    </p>
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="#">Enroll</a>
+                      <span class="mu-course-price" href="#">$0.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   {# <!-- latest courses end here --> #}
+   {# <!-- Technology section starts here --> #}
+  <section id="mu-our-teacher">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-our-teacher-area">
+            {# <!-- begain title --> #} 
+            <div class="mu-title">
+           {# <!-- <h2>More Courses</h2> --> #}  
+            </div>
+              {# <!-- end title --> #}
+   {# <!-- Start programming languages here --> #} 
+  <section id="mu-from-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-from-blog-area">
+             {# <!-- start title --> #} 
+            <div class="mu-title">
+              <h2> Top Programming Languages.</h2>
+            </div>
+             {# <!-- end title -->#}   
+             {# <!-- start from blog content   --> #} 
+            <div class="mu-from-blog-content">
+              <div class="row">
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                        <h3><a href="#">Python</a></h3>
+                      </figcaption>                      
+                    </figure>
+                     <div class="mu-blog-description">
+                      <p style="text-align: justify;">Python was originally conceptualized by Guido van Rossum in the late 1980s as a member of the National Research Institute of Mathematics and Computer Science. Initially, it was designed as a response to the ABC programming language that was also foregrounded in the Netherlands. . Python is a free and open source high level programming language which is interplated, which supports object oreinted, procedural oriented, functional and imperative oriented programming paradigm.</p>
+                      <a class="mu-read-more-btn" href="#">Enroll and Learn More.</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                        <h3><a href="#">JavaScript.</a></h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+                      <p style="text-align: justify;">
+                        
+                        JavaScript was created by Brendan Eich in 1995 during his time at Netscape Communications. JavaScript was initially developed for client-side and has been improved to server side programming language, also with the use of react native you can build Hybrid Mobile application. It is an object based language which employes the use of object and methods in programming. <b> Remember</b> - In JavaScripts objects are king, when you are good at Objects you are good in JavaScript.
+
+                      </p>
+                      <a class="mu-read-more-btn" href="#">Enroll and Learn More.</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                       <h3><a href="#"> R Programming Language.</a></h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+                      <p style="text-align: justify;">
+                         R is a programming language and software environment for statistical analysis, graphical representation and reporting. It was created by Ross Ihaka and Robert Gentleman, hence naming the language R from the first letter of Developers, and is currently developed by the R Development Core Team.
+                         R is an Open source statistical programming language under GNU General Public License and is available for al operating systems, that is Linux, Windows and Mac.
+                      </p>
+                      <a class="mu-read-more-btn" href="#">Enroll and Learn More.</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>     
+            {# <!-- end from blog content   --> #}  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {# <!-- End from blog --> #} 
+
+  {# <!-- Start footer --> #} 
+  <footer id="mu-footer">
+  {#  <!-- start footer top --> #} 
+    <div class="mu-footer-top">
+      <div class="container">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Quick Links.</h4>
+                <ul>
+                  <li><a href="{{ url_for('index')}}">Home</a></li>
+                  <li><a href="{{ url_for('Blogs')}}">Blog</a></li>
+                  <li><a href="{{ url_for('index')}}">Log In</a></li>
+                  <li><a href="{{ url_for('index')}}">Sign Up</a></li>
+                  <li><a href="{{ url_for('index')}}">Tech Talk</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4> Major Courses.</h4>
+                <ul>
+                  <li><a href="{{ url_for('Courses')}}">Python</a></li>
+                  <li><a href="{{ url_for('Courses')}}">JavaScript</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Full Stack</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Data Science</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Machine Learning</a></li>                  
+                </ul>
+              </div>
+            </div>
+            {# <!-- add flask forms to collect the emails for the users && use Java Script--> #}
+            {# <!--  the collect emails accoutn should be added to the Data_base --> #}
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>News letter</h4>
+                <p>Get latest update, news & academic offers</p>
+                <form class="mu-subscribe-form">
+                  <input type="email" placeholder="Type your Email">
+                  <button class="mu-subscribe-btn" type="submit">Subscribe!</button>
+                </form>               
+              </div>
+            </div>
+            {# <!-- end of the news letters section -->  #}
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Contact</h4>
+                <address>
+                  <p>P.O. Box 322, Thika, KENYA.</p>
+                  <p>Phone: (+254) 0798 166 628 </p>
+                  <p>Website: www.luxacademy.com</p>
+                  <p>Email: luxacademy@gmail.com</p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   {# <!-- end footer top --> #}
+   {# <!-- start footer bottom --> #}
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>&copy; All Right Reserved. Designed by <a href="#">Lux.com</a></p>
+        </div>
+      </div>
+    </div>
+      {# <!-- end footer bottom --> #}
+  </footer>
+  {# <!-- End footer --> #}
+  
+  {# <!-- jQuery library -->#}
+  <script src="{{ url_for('static', filename='javascript/jquery.min.js')}}"></script>  
+  {# <!-- Include all compiled plugins (below), or include individual files as needed --> #}
+  <script src="{{ url_for('static', filename='javascript/bootstrap.js')}}"></script>   
+  {# <!-- Slick slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/slick.js')}}"></script>
+  {# <!-- Counter -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/waypoints.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.counterup.js')}}"></script>  
+  {# <!-- Mixit slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.mixitup.js')}}"></script>
+  {# <!-- Add fancyBox --> #}       
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.fancybox.pack.js')}}"></script>
+   {# <!-- Custom js -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/custom.js')}}"></script> 
+{% endblock %}
+  </body>
+</html>

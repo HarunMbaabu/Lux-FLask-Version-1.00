@@ -1,0 +1,480 @@
+{% extends 'index.html' %}
+{%  block head %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    {#<!-- Font awesome --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+    {#<!-- Bootstrap --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">  
+    {#<!-- Slick slider --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}">           
+    {#<!-- Fancybox slider --> #}
+    <link rel="stylesheet" type="text/css"  media="screen" href="{{ url_for('static', filename='css/jquery.fancybox.css') }}"> 
+    {#<!-- Theme color -->#}
+    <link id="switcher" rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default-theme.css') }}">
+    {#<!-- Main style sheet --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">   
+    {#<!-- Google Fonts --> #}
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    <title>Lux Academy Inc||Course</title>
+{% endblock %}
+{# this is the end of the head/title section#}
+{# I will need  another block for the body section #}
+{% block body %}
+  <!--START SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>      
+    </a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  <!-- Start header  -->
+  <header id="mu-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-header-area">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-left">
+                  <div class="mu-top-email">
+                    <i class="fa fa-envelope"></i>
+                    <span>luxacademy@gmail.com</span>
+                  </div>
+                  <div class="mu-top-phone">
+                    <i class="fa fa-phone"></i>
+                    <span>(+254) 079816 6628</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-right">
+                  <nav>
+                    <ul class="mu-top-social-nav">
+                      <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                      <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                      <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                      <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                      <li><a href="#"><span class="fa fa-github"></span></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header  -->
+  <!-- Start menu -->
+  <section id="mu-menu">
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Lux Academy</span></a>
+          <!-- IMG BASED LOGO  -->
+          <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+         <ul id="top-menu" class="nav navbar-nav navbar-right main-nav"> 
+            <li><a href="{{ url_for('index')}}">Home</a></li>            
+            <li><a href="{{ url_for('Courses')}}" >Course </a></li> 
+            <li><a href="{{ url_for('Blogs')}}">Blog</a> </li>
+            <li><a href="{{ url_for('About')}}">About</a></li>
+            <li ><a href="#">Tech Talk</a></li>               
+            <li><a href="#">SIGN UP</a></li>   
+            <li ><a href="#">LOG IN</a></li>                            
+              </ul>                   
+        </div><!--/.nav-collapse -->        
+      </div>     
+    </nav>
+  </section>
+  <!-- End menu -->
+  <!-- Start search box -->
+  <div id="mu-search">
+    <div class="mu-search-area">      
+      <button class="mu-search-close"><span class="fa fa-close"></span></button>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">            
+            <form class="mu-search-form">
+              <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End search box -->
+ <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+           <h2>Lux Tech Talk.</h2>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+ <section id="mu-course-content">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-course-content-area">
+            <div class="row">
+              <div class="col-md-9">
+                <!-- start course content container -->
+                <div class="mu-course-container mu-blog-archive">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{{ url_for('static', filename='img/blog/trends.jpeg')}}" alt="img"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="#">Top Ten Programming languages.</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        <div class="mu-blog-meta">
+                          <a href="#">By Admin</a>
+                          <a href="#">12 october 2019</a>
+                          <!-- <span><i class="fa fa-comments-o"></i>87</span> -->
+                        </div>
+                        <div class="mu-blog-description">
+                          <p style="text-align: justify;">
+                            Programming have been trending for the last five years as one of the most marketable careers in the world, It is also taken as a hobby by many. In this post we have taken into consinderation all factors and analyzed the best programming langauges, in terms of speed, pay, uses and many more metric.
+                          </p>
+                          <a class="mu-read-more-btn" href="#">Read More</a>
+                        </div>
+                      </article> 
+                    </div>                  
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{{ url_for('static', filename='img/blog/trends.jpeg')}}" alt="img"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="#">Should you learn programming?</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        <div class="mu-blog-meta">
+                          <a href="#">By Admin</a>
+                          <a href="#">22 october 201019</a>
+                        <!--   <span><i class="fa fa-comments-o"></i>87</span> -->
+                        </div>
+                        <div class="mu-blog-description">
+                          <p style="text-align: justify;">
+                            Programming have been trending for the last five years as one of the most marketable careers in the world, It is also taken as a hobby by many. Many of us are confused and yet to make decision if to learn coding in 2020 or not, its not late but you should put  in consinderation of changing factor in the field of coding.
+
+                          </p>
+                          <a class="mu-read-more-btn" href="#">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                   <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{{ url_for('static', filename='img/blog/trends.jpeg')}}" alt="img"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="#">Best laptop for programming?.</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        <div class="mu-blog-meta">
+                          <a href="#">By Admin</a>
+                          <a href="#">30 october 2019</a>
+                      <!--    <span><i class="fa fa-comments-o"></i>87</span> -->
+                        </div>
+                        <div class="mu-blog-description">
+                          <p style="text-align: justify;">
+                            
+                            To be an effective Software Developer, Machine Learning Engineer  Data scientist or any other field in Technology You should gather the most effective tools, laptop or a pc is one of the must have tools for every programmer. Consinder reading this post before purchasing your next pc or Laptop. 
+                          </p>
+                          <a class="mu-read-more-btn" href="#">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{{ url_for('static', filename='img/blog/trends.jpeg')}}" alt="img"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="#">Python Programming language.</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        <div class="mu-blog-meta">
+                          <a href="#">By Admin</a>
+                          <a href="#">02 November 2019</a>
+                         <!--  <span><i class="fa fa-comments-o"></i>87</span> -->
+                        </div>
+                        <div class="mu-blog-description">
+                          <p style="text-align: justify;">
+
+                          Python is a free and open source high level programming language which is interplated, which supports object oreinted, procedural oriented, functional and imperative oriented programming paradigm. We have a full video on python which will teach you from introduction to advance and it broad application.
+                           </p>
+                          <a class="mu-read-more-btn" href="#">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{{ url_for('static', filename='img/blog/trends.jpeg')}}" alt="img"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="#">Future of Machine Learning.</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        <div class="mu-blog-meta">
+                          <a href="#">By Admin</a>
+                          <a href="#">02 June 2019</a>
+                        <!--   <span><i class="fa fa-comments-o"></i>87</span> -->
+                        </div>
+                        <div class="mu-blog-description">
+                          <p style="text-align:justify;">
+                            
+                            Among the top Trending Tech Jobs in the world You will hear about Data science and Machine Learning.The two career are consindered as the most well paying career in tech but let prediict the future of Machine learning. 
+                          </p>
+                          <a class="mu-read-more-btn" href="#">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{{ url_for('static', filename='img/blog/trends.jpeg')}}" alt="img"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="#">The Future of Data Science.
+
+                          </a></h3>
+                          </figcaption>                      
+                        </figure>
+                        <div class="mu-blog-meta">
+                          <a href="#">By Admin</a>
+                          <a href="#">02 June 2019</a>
+                         <!--  <span><i class="fa fa-comments-o"></i>87</span> -->
+                        </div>
+                        <div class="mu-blog-description">
+                          <p style="text-align: justify;">
+                           Among the top Trending Tech Jobs in the world You will hear about Data science and Machine Learning.The two career are consindered as the most well paying career in tech but let prediict the future of Data science.</p>
+                          <a class="mu-read-more-btn" href="#">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <!-- end course content container -->
+                <!-- start course pagination -->
+                <div class="mu-pagination">
+                  <nav>
+                    <ul class="pagination">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span class="fa fa-angle-left"></span> Prev 
+                        </a>
+                      </li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                         Next <span class="fa fa-angle-right"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- end course pagination -->
+              </div>
+              <div class="col-md-3">
+                <!-- start sidebar -->
+                <aside class="mu-sidebar">
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Categories</h3>
+                    <ul class="mu-sidebar-catg">
+                      <li><a href="#">C++</a></li>
+                      <li><a href="">Python</a></li>
+                      <li><a href="">JavaScript</a></li>
+                      <li><a href="">DataBase</a></li>
+                      <li><a href="">Data science</a></li>
+                      <li><a href="">Machine Learning</a></li>
+                    </ul>
+                  </div>
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Popular News</h3>
+                    <div class="mu-sidebar-popular-courses">
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/courses/big-data-3338320_960_720.png')}}" alt="img">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Data Science</a></h4>                      
+                          <span class="popular-course-price">Ksh.0.00</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/courses/flask.jpeg')}}" alt="img">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Django</a></h4>                      
+                          <span class="popular-course-price">Ksh.0.00</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/courses/1.jpg')}}" alt="Python">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Python</a></h4>                      
+                          <span class="popular-course-price">Ksh0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Archives</h3>
+                    <ul class="mu-sidebar-catg mu-sidebar-archives">
+                      <li><a href="#">May <span>(25)</span></a></li>
+                      <li><a href="">June <span>(35)</span></a></li>
+                      <li><a href="">July <span>(20)</span></a></li>
+                      <li><a href="">August <span>(125)</span></a></li>
+                      <li><a href="">September <span>(45)</span></a></li>
+                      <li><a href="">October <span>(85)</span></a></li>
+                    </ul>
+                  </div>
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Tags Cloud</h3>
+                    <div class="tag-cloud">
+                      <a href="#">Health</a>
+                      <a href="#">Science</a>
+                      <a href="#">Sports</a>
+                      <a href="#">Mathematics</a>
+                      <a href="#">Web Design</a>
+                      <a href="#">Admission</a>
+                      <a href="#">History</a>
+                      <a href="#">Environment</a>
+                    </div>
+                  </div>
+                  <!-- end single sidebar -->
+                </aside>
+                <!-- / end sidebar -->
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+  <!-- Start footer -->
+  <footer id="mu-footer">
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="{{ url_for('index')}}">Home</a></li>
+                  <li><a href="{{ url_for('Blogs')}}">Blog</a></li>
+                  <li><a href="{{ url_for('index')}}">Log In</a></li>
+                  <li><a href="{{ url_for('index')}}">Sign Up</a></li>
+                  <li><a href="{{ url_for('index')}}">Tech Talk</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4> Major Courses.</h4>
+                <ul>
+                  <li><a href="{{ url_for('Courses')}}">Python</a></li>
+                  <li><a href="{{ url_for('Courses')}}">JavaScript</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Full Stack</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Data Science</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Machine Learning</a></li>                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>News letter</h4>
+                <p>Get latest update, news & academic offers</p>
+                <form class="mu-subscribe-form">
+                  <input type="email" placeholder="Type your Email">
+                  <button class="mu-subscribe-btn" type="submit">Subscribe!</button>
+                </form>               
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Contact</h4>
+                <address>
+                   <p>P.O. Box 322, Thika, KENYA.</p>
+                  <p>Phone: (+254) 798166628 </p>
+                  <p>Website: www.lux.com</p>
+                  <p>Email: luxacadermy.com.io</p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer top -->
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>&copy; All Right Reserved. Designed by <a href="#">Lux.com</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+  <!-- End footer -->
+  {# <!-- jQuery library -->#}
+  <script src="{{ url_for('static', filename='javascript/jquery.min.js')}}"></script>  
+  {# <!-- Include all compiled plugins (below), or include individual files as needed --> #}
+  <script src="{{ url_for('static', filename='javascript/bootstrap.js')}}"></script>   
+  {# <!-- Slick slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/slick.js')}}"></script>
+  {# <!-- Counter -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/waypoints.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.counterup.js')}}"></script>  
+  {# <!-- Mixit slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.mixitup.js')}}"></script>
+  {# <!-- Add fancyBox --> #}       
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.fancybox.pack.js')}}"></script>
+   {# <!-- Custom js -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/custom.js')}}"></script>
+{% endblock %}
+{# this is the end of the body section #}
+{# i will need another block for the footer section here #}
+{% block footer %}
+{% endblock%}

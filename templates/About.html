@@ -1,0 +1,310 @@
+{% extends 'index.html' %}
+{%  block head %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    {#<!-- Font awesome --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+    {#<!-- Bootstrap --> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">  
+    {#<!-- Slick slider --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}">           
+    {#<!-- Fancybox slider --> #}
+    <link rel="stylesheet" type="text/css"  media="screen" href="{{ url_for('static', filename='css/jquery.fancybox.css') }}"> 
+    {#<!-- Theme color -->#}
+    <link id="switcher" rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default-theme.css') }}">
+    {#<!-- Main style sheet --> #}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">   
+    {#<!-- Google Fonts --> #}
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    <title>Lux Academy Inc||Founder</title>
+{% endblock %}
+{# this is the end of the head/title section#}
+{# I will need  another block for the body section #}
+{% block body %}
+  <!--START SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>      
+    </a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  <!-- Start header  -->
+  <header id="mu-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-header-area">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-left">
+                  <div class="mu-top-email">
+                    <i class="fa fa-envelope"></i>
+                    <span>luxacademy@gmail.com</span>
+                  </div>
+                  <div class="mu-top-phone">
+                    <i class="fa fa-phone"></i>
+                    <span>(+254) 0798166628</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-right">
+                  <nav>
+                    <ul class="mu-top-social-nav">
+                      <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                      <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                      <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                      <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                      <li><a href="#"><span class="fa fa-github"></span></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header  -->
+  <!-- Start menu -->
+  <section id="mu-menu">
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Lux Academy</span></a>
+          <!-- IMG BASED LOGO  -->
+          <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a href="{{ url_for('index')}}">Home</a></li>            
+            <li><a href="{{ url_for('Courses')}}" >Course </a></li> 
+            <li><a href="{{ url_for('Blogs')}}">Blog</a> </li>
+            <li><a href="{{ url_for('About')}}">Founder</a></li>
+            <li ><a href="#">Tech Talk</a></li>               
+            <li><a href="#">SIGN UP</a></li>   
+            <li ><a href="#">LOG IN</a></li>                            
+              </ul>                    
+        </div><!--/.nav-collapse -->        
+      </div>     
+    </nav>
+  </section>
+  <!-- End menu -->
+  <!-- Start search box -->
+  <div id="mu-search">
+    <div class="mu-search-area">      
+      <button class="mu-search-close"><span class="fa fa-close"></span></button>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">            
+            <form class="mu-search-form">
+              <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End search box -->
+ <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+           <h2>Lux Academy Founder</h2>
+           
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+
+
+<!-- Start contact  -->
+ <section id="mu-contact">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-contact-area">
+          <!-- start title -->
+          <div class="mu-title">
+            <h2>Mbaabu Mwenda Harun</h2>
+            <p style="text-align: justify;"> Known by many as Gray Hat, Harun mbaabu mwenda is  the founder and content manager of Lux Coding Academy, His Idea was driven by the fact we can make a world a better place and save humanity by solving real world problems using Computers.</p>
+          </div>
+          <!-- end title -->
+          <!-- start contact content -->
+          <div class="mu-contact-content">           
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mu-contact-left">
+                   <p style="text-align: justify;" >
+      My name is Harun Mwenda Mbaabu. I live in Thika, Kenya 
+      undergraduate student at Murang'a University of technology 
+      (M.U.T) pursuing  <b> Bachelor of sceince ( Mathematics and Computer Science) </b>
+      Statistics Major. 
+      I am obsessed with  programming, artificial inteligence,
+       mobile and computer technology and cracking mathematical
+        puzzles. </p>
+                  <p style="text-align: justify;">
+
+      However, Web development and design is the epicenter 
+      to my life  what
+      inspires me every day, it the way i make my living 
+      the way i express myself and my lifestyle too.
+    </p>
+                
+                <p style="text-align: justify;">
+      Programming, Web Development and Design is core of everything that 
+      i do and i want to share that with anyone who partakes. I am a  Full
+       Stack JavaScript and Python development. I have a vast knowledge on
+        Big Data, Data engineering and Machine learing using Python and  R
+         programming languages.
+        </p> 
+        <p style="text-align: justify;">My Hobbies and interests are in Coding, Watching
+         soccer games, Car racing and Reading Novels.
+         </p>
+         <h3>Social Media Handle.</h3>
+      <p style="display: inline;">
+           <ul class="mu-top-social-nav">
+                      <li><a href="https://web.facebook.com/haron.haronkababu"><span class="fa fa-facebook"> <b> Facebook </b></span></a></li>
+                      <li><a href="https://twitter.com/GrayHat36124333"><span class="fa fa-twitter"> <b> Twitter </b></span></a></li>
+                      <li><a href="#"><span class="fa fa-instagram"> <b> instagram </b></span></a></li>
+                      <li><a href="https://www.linkedin.com/in/mbaabu-h-mwenda-8a89ab174/"><span class="fa fa-linkedin">  <b>Linkedin </b> </span></a></li>
+                      <li><a href="https://github.com/HarunHM"><span class="fa fa-github"> <b>  Github </b> </span></a></li>
+                    </ul>
+         </p>
+         <p style="text-align: justify;">Proffessionally am a DevOps Engineer and a Data scientist with JavaScript, Python and C++ as the Best programming Language. <br /> <b>  My favourate day to day tools are React, Flask and Docker for web development, Jupyter notebook, R-studio and Hadoop for Data science and Machine learning. </b></p>
+          <p>Below is a link to my Resume/Portfolio. <br> 
+          <a href="https:/harunresume.netlify.com"> <h3> Portfolio. </h3> </a>
+         </p>
+
+
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mu-contact-right">
+
+
+                  <img src="{{ url_for('static', filename='img/about/pro.jpg')}}" style="width:90%; height:100%; display: center;">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end contact content -->
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End contact  -->
+ 
+
+
+
+
+
+
+  <!-- Start footer -->
+  <footer id="mu-footer">
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="{{ url_for('index')}}">Home</a></li>
+                  <li><a href="{{ url_for('Blogs')}}">Blog</a></li>
+                  <li><a href="{{ url_for('index')}}">Log In</a></li>
+                  <li><a href="{{ url_for('index')}}">Sign Up</a></li>
+                  <li><a href="{{ url_for('index')}}">Tech Talk</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4> Major Courses.</h4>
+                <ul>
+                  <li><a href="{{ url_for('Courses')}}">Python</a></li>
+                  <li><a href="{{ url_for('Courses')}}">JavaScript</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Full Stack</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Data Science</a></li>
+                  <li><a href="{{ url_for('Courses')}}">Machine Learning</a></li>                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>News letter</h4>
+                <p>Get latest update, news & academic offers</p>
+                <form class="mu-subscribe-form">
+                  <input type="email" placeholder="Type your Email">
+                  <button class="mu-subscribe-btn" type="submit">Subscribe!</button>
+                </form>               
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Contact</h4>
+                <address>
+                  <p>P.O. Box 322, Thika, KENYA.</p>
+                  <p>Phone: (+254) 798166628 </p>
+                  <p>Website: www.lux.com</p>
+                  <p>Email: luxacadermy.com</p>
+
+
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer top -->
+
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>&copy; All Right Reserved. Designed by <a href="#"> Lux.com</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+  <!-- End footer -->
+
+ {# <!-- jQuery library -->#}
+  <script src="{{ url_for('static', filename='javascript/jquery.min.js')}}"></script>  
+  {# <!-- Include all compiled plugins (below), or include individual files as needed --> #}
+  <script src="{{ url_for('static', filename='javascript/bootstrap.js')}}"></script>   
+  {# <!-- Slick slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/slick.js')}}"></script>
+  {# <!-- Counter -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/waypoints.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.counterup.js')}}"></script>  
+  {# <!-- Mixit slider -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.mixitup.js')}}"></script>
+  {# <!-- Add fancyBox --> #}       
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery.fancybox.pack.js')}}"></script>
+   {# <!-- Custom js -->#}
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/custom.js')}}"></script>
+{% endblock %}
+{# this is the end of the body section #}
+{# i will need another block for the footer section here #}
+{% block footer %}
+{% endblock%}
