@@ -38,7 +38,7 @@ google-auth-httplib2==0.0.3
 gunicorn==19.7.1
 httplib2==0.14.0
 itsdangerous==0.24
-Jinja2==2.10.3
+Jinja2==2.11.3
 kombu==4.0.0
 Mako==1.0.4
 MarkupSafe==0.23
