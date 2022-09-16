@@ -40,7 +40,7 @@ httplib2==0.14.0
 itsdangerous==0.24
 Jinja2==2.10.3
 kombu==4.0.0
-Mako==1.0.4
+Mako==1.2.2
 MarkupSafe==0.23
 mongoengine==0.18.2
 mysql-connector==2.2.9
